@@ -1,3 +1,84 @@
-body {
-  background-color: tomato;
+.container {
+  max-width: 290px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.logo {
+  grid-column: 1/-1;
+}
+
+.nav {
+  grid-column: 1/-1;
+}
+
+.hero__title {
+  grid-column: 1/-1;
+}
+
+.hero__text {
+  grid-column: 1/-1;
+}
+
+.hero__button {
+  grid-column: 1/-1;
+}
+
+.reproduction__title {
+  grid-column: 1/-1;
+}
+
+.reproduction__countries {
+  grid-column: 1/-1;
+  display: flex;
+}
+
+.reproduction__list {
+  grid-column: 1/-1;
+}
+
+.promo__title {
+  grid-column: 1/-1;
+}
+
+.promo__text {
+  grid-column: 1/-1;
+}
+
+.promo__button {
+  grid-column: 1/-1;
+}
+
+.team__image {
+  grid-column: 1/-1;
+}
+
+.team__title {
+  grid-column: 1/-1;
+}
+
+.team__text {
+  grid-column: 1/-1;
+}
+
+.team__list {
+  display: flex;
+  grid-column: 1/-1;
+}
+
+.main-footer__logo {
+  grid-column: 1/-1;
+}
+
+.main-footer__social {
+  grid-column: 1/-1;
+}
+
+.social__list {
+  display: flex;
+}
+
+.rights {
+  grid-column: 1/-1;
 }

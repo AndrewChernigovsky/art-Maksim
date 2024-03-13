@@ -5,6 +5,15 @@ import plumber from 'gulp-plumber';
 import sass from 'gulp-dart-sass';
 import browser from 'browser-sync';
 import rimraf from 'gulp-rimraf';
+import imagemin from 'gulp-imagemin';
+
+// Images
+
+const optimizeImages = () => {
+  return gulp.src('source/images/**/*.*')
+    .pipe(imagemin())
+    .pipe(gulp.dest('build/images'))
+}
 
 // Удаляет build
 
@@ -48,10 +57,10 @@ const server = (done) => {
 
 const watcher = () => {
   gulp.watch('source/styles/**/*.scss', gulp.series(taskStyles));
-  gulp.watch('source/*.html').on('change', browser.reload);
+  gulp.watch('source/*.html').on('change', gulp.series(taskHTML, browser.reload));
 }
 
-const build = gulp.series(cleanBuild, taskHTML, taskStyles);
+const build = gulp.series(cleanBuild, taskHTML, taskStyles, optimizeImages);
 
 export default gulp.series(
   build,
