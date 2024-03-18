@@ -1,4 +1,5 @@
 .button {
+  @include font-medium(18px, auto);
   display: block;
   text-align: center;
   text-decoration: none;
@@ -7,5 +8,10 @@
     border: 1px solid #598d66;
     background-color: transparent;
     color: #598d66;
+  }
+
+  &--light {
+    background-color: #EEDB6D;
+    @include font-medium(18px, auto);
   }
 }

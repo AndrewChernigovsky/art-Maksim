@@ -1,3 +1,4 @@
 .rights {
+  @include font-medium(12px, 120%, #86928B);
   grid-column: 1 / -1;
 }
