@@ -17,12 +17,12 @@
     <div class="container">
       <nav class="main-header__nav nav">
         <div class="nav__wrapper">
-          <button class="nav__burger" type="button">
+          <div class="nav__burger">
             <span class="visually-hidden">Открыть меню.</span>
             <span class="nav__burger-line"></span>
             <span class="nav__burger-line"></span>
             <span class="nav__burger-line"></span>
-          </button>
+          </div>
           <button class="nav__cart" type="button">
             <span class="visually-hidden">Открыть корзину.</span>
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -39,19 +39,19 @@
             </svg>
           </button>
         </div>
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a href="#" class="nav__link">Репродукция</a>
-          </li>
-          <li class="nav__item">
-            <a href="#" class="nav__link">Новинки</a>
-          </li>
-          <li class="nav__item">
-            <a href="#" class="nav__link">О нас</a>
-          </li>
-        </ul>
       </nav>
     </div>
+    <ul class="nav__list">
+      <li class="nav__item">
+        <a href="#" class="nav__link">Репродукция</a>
+      </li>
+      <li class="nav__item">
+        <a href="#" class="nav__link">Новинки</a>
+      </li>
+      <li class="nav__item">
+        <a href="#" class="nav__link">О нас</a>
+      </li>
+    </ul>
   </header>
   <main class="main-content">
     <section class="hero">
@@ -208,5 +208,6 @@
       </div>
     </footer>
   </main>
+  <script src="js/burger.js"></script>
 </body>
 </html>

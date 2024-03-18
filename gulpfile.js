@@ -8,6 +8,13 @@ import rimraf from 'gulp-rimraf';
 import imagemin from 'gulp-imagemin';
 import ttf2woff from 'gulp-ttf2woff';
 
+// Script js
+
+const scripts = () => {
+  return gulp.src('source/js/**/*.js')
+    .pipe(gulp.dest('build/js'))
+}
+
 // Шрифты ttf в woff
 
 const fonts = () => {
@@ -67,9 +74,10 @@ const server = (done) => {
 const watcher = () => {
   gulp.watch('source/styles/**/*.scss', gulp.series(taskStyles));
   gulp.watch('source/*.html').on('change', gulp.series(taskHTML, browser.reload));
+  gulp.watch('source/js/**/*.js', gulp.series(scripts));
 }
 
-const build = gulp.series(cleanBuild, taskHTML, taskStyles, optimizeImages, fonts);
+const build = gulp.series(cleanBuild, taskHTML, taskStyles, optimizeImages, fonts, scripts);
 
 export default gulp.series(
   build,
