@@ -1,3 +1,47 @@
+@font-face {
+  font-family: "Raleway";
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/Raleway-Medium.woff") format("woff");
+}
+@font-face {
+  font-family: "Raleway";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/Raleway-Bold.woff") format("woff");
+}
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
+
 .container {
   max-width: 290px;
   margin: 0 auto;
@@ -13,16 +57,74 @@
   grid-column: 1/-1;
 }
 
+.nav__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+}
+
+.nav__burger {
+  padding: 8px 5px;
+  background-color: transparent;
+  border: none;
+}
+
+.nav__burger-line {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4px;
+  background-color: #4C5866;
+  min-width: 20px;
+  min-height: 2px;
+  border-radius: 2px;
+}
+
+.nav__burger-line:last-child {
+  margin-bottom: 0;
+}
+
+.nav__cart {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+}
+
 .hero__title {
   grid-column: 1/-1;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 30px;
+  line-height: 30px;
+  color: #2C2D35;
+}
+.hero__title span {
+  color: #598D66;
 }
 
 .hero__text {
   grid-column: 1/-1;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 150%;
+  color: #86928b;
 }
 
 .hero__button {
-  grid-column: 1/-1;
+  grid-column: 1/2;
+  width: 154px;
+  padding: 15px 29px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 18px;
+  line-height: auto;
+  color: #598d66;
 }
 
 .reproduction__title {
@@ -81,4 +183,31 @@
 
 .rights {
   grid-column: 1/-1;
+}
+
+.main-header {
+  margin-bottom: 61px;
+  background-color: #E1EDE6;
+}
+
+.main-header__logo {
+  display: flex;
+  justify-content: center;
+  padding: 16px 0;
+  background-color: #fff;
+}
+
+.main-header__nav ul {
+  display: none;
+}
+
+.button {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}
+.button--transparent {
+  border: 1px solid #598d66;
+  background-color: transparent;
+  color: #598d66;
 }

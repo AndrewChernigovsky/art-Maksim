@@ -1,3 +1,38 @@
 .nav {
   grid-column: 1 / -1;
 }
+
+.nav__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+}
+
+.nav__burger {
+  padding: 8px 5px;
+  background-color: transparent;
+  border: none;
+}
+
+.nav__burger-line {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4px;
+  background-color: #4C5866;
+  min-width: 20px;
+  min-height: 2px;
+  border-radius: 2px;
+}
+
+.nav__burger-line:last-child {
+  margin-bottom: 0;
+}
+
+.nav__cart {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+}

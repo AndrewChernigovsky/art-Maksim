@@ -1,0 +1,11 @@
+.button {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+
+  &--transparent {
+    border: 1px solid #598d66;
+    background-color: transparent;
+    color: #598d66;
+  }
+}

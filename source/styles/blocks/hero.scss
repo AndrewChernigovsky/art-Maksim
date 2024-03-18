@@ -1,11 +1,20 @@
 .hero__title {
   grid-column: 1 / -1;
+  @include font-medium(30px, 30px);
+
+  span {
+    color: #598D66;
+  }
 }
 
 .hero__text {
   grid-column: 1 / -1;
+  @include font-medium(14px, 150%, #86928b);
 }
 
 .hero__button {
-  grid-column: 1 / -1;
+  grid-column: 1 / 2;
+  width: 154px;
+  padding: 15px 29px;
+  @include font-medium(18px, auto, #598d66);
 }

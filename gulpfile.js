@@ -6,6 +6,15 @@ import sass from 'gulp-dart-sass';
 import browser from 'browser-sync';
 import rimraf from 'gulp-rimraf';
 import imagemin from 'gulp-imagemin';
+import ttf2woff from 'gulp-ttf2woff';
+
+// Шрифты ttf в woff
+
+const fonts = () => {
+  return gulp.src('source/fonts/**/*.ttf')
+    .pipe(ttf2woff())
+    .pipe(gulp.dest('build/fonts'))
+}
 
 // Images
 
@@ -60,7 +69,7 @@ const watcher = () => {
   gulp.watch('source/*.html').on('change', gulp.series(taskHTML, browser.reload));
 }
 
-const build = gulp.series(cleanBuild, taskHTML, taskStyles, optimizeImages);
+const build = gulp.series(cleanBuild, taskHTML, taskStyles, optimizeImages, fonts);
 
 export default gulp.series(
   build,
