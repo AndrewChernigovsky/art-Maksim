@@ -12,26 +12,31 @@
   grid-column: 1 / -1;
   margin: 19px 0;
   display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  transition: scroll-left 0.3s ease-out;
 }
 
 .reproduction__name-country {
+  @include font-medium(18px, auto, #2C2D35);
+  margin: 0;
+  scroll-snap-align: start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 10px 20px;
   background-color: #D4E8D9;
   border-radius: 20px;
   margin-right: 20px;
 
-  p {
-    @include font-medium(18px, auto, #2C2D35);
-    margin: 0;
-  }
-
   &--active {
     background-color: #376B44;
-
-    p {
-      color: #F4F6F5;
-    }
+    color: #F4F6F5;
   }
+}
+
+.reproduction__name-country:last-child {
+  margin-right: 0;
 }
 
 .reproduction__list {
