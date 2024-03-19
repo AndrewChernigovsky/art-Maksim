@@ -1,0 +1,28 @@
+.team {
+  margin-bottom: 90px;
+}
+
+.team__image {
+  grid-column: 1 / -1;
+  margin-bottom: 30px;
+}
+
+.team__title {
+  @include font-medium(24px, 110%);
+  grid-column: 1 / -1;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.team__text {
+  margin: 0;
+  grid-column: 1 / -1;
+  line-height: 22px;
+  margin-bottom: 20px;
+}
+
+.team__list {
+  display: flex;
+  gap: 25px;
+  grid-column: 1 / -1;
+}

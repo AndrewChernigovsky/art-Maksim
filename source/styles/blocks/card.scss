@@ -1,0 +1,35 @@
+.card {
+  background-color: #E1EDE6;
+  padding: 20px 20px 30px 20px;
+}
+
+.card__image {
+  margin-bottom: 12px;
+}
+
+.card__author {
+  margin: 0;
+  margin-bottom: 10px;
+  color: #86928B;
+}
+
+.card__name {
+  @include font-medium(24px, auto);
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.card__info {
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.card__price {
+  @include font-medium(20px, auto, #598D66);
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.card__button {
+  padding: 14px 80px;
+}

@@ -1,0 +1,43 @@
+.promo {
+  background-image: url('../images/promo-bg.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 50px 0;
+  margin-bottom: 60px;
+}
+
+.promo__title {
+  display: flex;
+  grid-column: 1 / -1;
+  @include font-medium(24px, 100%, #F4F6F5);
+  margin: 0;
+  margin-bottom: 20px;
+
+  &::before {
+    margin-top: -24px;
+    min-width: 50px;
+    min-height: 50px;
+    content: "";
+    background-image: url('../images/star.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 10px;
+  }
+}
+
+.promo__text {
+  margin: 0;
+  line-height: 140%;
+  grid-column: 1 / -1;
+  color: #F4F6F5;
+}
+
+.promo__text:not(:last-of-type) {
+  margin-bottom: 13px;
+}
+
+.promo__button {
+  margin-top: 27px;
+  grid-column: 1 / -1;
+  padding: 15px 84px;
+}

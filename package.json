@@ -1,0 +1,36 @@
+{
+  "name": "art-maksim",
+  "version": "1.0.0",
+  "description": "Study project",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Korsun112/art-Maksim.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Korsun112/art-Maksim/issues"
+  },
+  "homepage": "https://github.com/Korsun112/art-Maksim#readme",
+  "dependencies": {
+    "browser-sync": "^3.0.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-dart-sass": "^1.1.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rimraf": "^1.0.0"
+  },
+  "devDependencies": {
+    "del": "^7.1.0",
+    "gulp": "^4.0.2",
+    "gulp-imagemin": "^9.0.0",
+    "gulp-ttf2woff": "^1.1.1",
+    "stylelint": "^16.2.1",
+    "stylelint-config-htmlacademy": "^4.1.0"
+  },
+  "type": "module"
+}
